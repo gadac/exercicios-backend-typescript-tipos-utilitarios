@@ -19,3 +19,21 @@ type Carrinho = {
     tipoTransacao: 'credito' | 'Debito',
     cartao: Cartao
 }
+
+type Endereco = {
+    cep: number,
+    rua: string,
+    bairro: string,
+    cidade: string,
+    estado: string
+}
+
+type NovoCarrinho = {
+    item: Item,
+    qtd: number,
+    desconto: number,
+    frete: number,
+    tipoTransacao: Lowercase<'credito' | 'Debito'>,
+    cartao: Cartao,
+    endereco: Endereco
+}
